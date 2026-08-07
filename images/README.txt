@@ -1,0 +1,1 @@
+Placeholder images. Replace these with your actual logo, trophy, report, banner and school logos.
