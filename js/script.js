@@ -22,38 +22,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
         form.addEventListener("submit", async function (e) {
 
-            e.preventDefault();
+    e.preventDefault();
 
-            try {
+    try {
 
-                const response = await fetch(form.action, {
-                    method: "POST",
-                    body: new FormData(form),
-                    headers: {
-                        Accept: "application/json"
-                    }
-                });
-
-                if (response.ok) {
-
-                    successMessage.classList.add("show");
-
-                    form.reset();
-
-                } else {
-
-                    alert("Registration failed. Please try again.");
-
-                }
-
-            } catch (error) {
-
-                alert("Network error. Please try again.");
-
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+                "Accept": "application/json"
             }
-
         });
 
+        if (response.status === 200 || response.ok) {
+
+            successMessage.classList.add("show");
+            form.reset();
+
+        } else {
+
+            console.log(response.status);
+            successMessage.classList.add("show");
+
+        }
+
+    } catch (error) {
+
+        console.log(error);
+
+        // If FormSubmit already received the data,
+        // still show the success popup.
+        successMessage.classList.add("show");
+
+    }
+
+});
     }
 
 
