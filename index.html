@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+<!--    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>-->
 
     <link rel="stylesheet" href="css/style1.css">
     <link rel="icon" href="images/favicon.png">
@@ -112,35 +112,35 @@
           <h3>Student Registration</h3>
           <form action="https://formsubmit.co/ravisambial777@gmail.com" id="registrationForm" method="POST">
             <div class="input-group">
-              <input type="text" required>
+              <input type="text" name="student_name" required>
               <label>Student Name</label>
             </div>
             <div class="input-group">
-              <input type="text" required>
+              <input type="text" name="parent_name" required>
               <label>Parent Name</label>
             </div>
             <div class="double">
               <div class="input-group">
-                <input type="tel" required>
+                <input type="tel" name="mobile_student" required>
                 <label>Student Mobile</label>
               </div>
               <div class="input-group">
-                <input type="tel" required>
+                <input type="tel" name="mobile_parent" required>
                 <label>Parent Mobile</label>
               </div>
             </div>
             <div class="input-group">
-              <input type="email">
+              <input type="email" name="email">
               <label>Email Address</label>
             </div>
             <div class="double">
-              <select required>
+              <select required name="Board">
                 <option>Select Board</option>
                 <option>CBSE</option>
                 <option>ICSE</option>
                 <option>State Board</option>
               </select>
-              <select required>
+              <select required name="class">
                 <option>Class 9</option>
                 <option>Class 10</option>
                 <option>Class 11</option>
@@ -148,11 +148,11 @@
               </select>
             </div>
             <div class="input-group">
-              <input type="text">
+              <input type="text" name="school_name">
               <label>School Name</label>
             </div>
             <div class="double">
-              <select>
+              <select name="state">
                 <option>Select State</option>
                 <option>Chandigarh</option>
                 <option>Punjab</option>
@@ -161,15 +161,25 @@
                 <option>Delhi</option>
                 <option>Other</option>
               </select>
-              <input placeholder="City">
+              <input placeholder="City" name="city">
             </div>
+            
             <input type="hidden" name="_subject" value="New ZNEXT Registration">
 
-<input type="hidden" name="_captcha" value="false">
+			<input type="hidden" name="_captcha" value="false">
 
-<input type="hidden" name="_template" value="table">
+			<input type="hidden" name="_template" value="table">
             <button class="register-btn"> Register Now </button>
           </form>
+          <div id="successMessage" class="success-message">
+    <div class="success-icon">✅</div>
+    <h3>Registration Successful!</h3>
+    <p>
+        Thank you for registering for <strong>ZNEXT 2027</strong>.<br>
+        Our team will contact you shortly.
+    </p>
+    <button id="closeMessage">OK</button>
+</div>
         </div>
       </div>
     </section>
