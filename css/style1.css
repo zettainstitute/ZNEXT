@@ -16,6 +16,61 @@ body{
  color:#123;
  overflow-x:hidden;
 }
+
+.success-message{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(.8);
+    width:90%;
+    max-width:420px;
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(0,0,0,.2);
+    z-index:99999;
+    opacity:0;
+    visibility:hidden;
+    transition:.35s ease;
+	
+}
+
+
+.success-message.show{
+    display:block;
+}
+.success-message.show{
+    opacity:1;
+    visibility:visible;
+    transform:translate(-50%,-50%) scale(1);
+}
+
+.success-icon{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.success-message h3{
+    color:#0c2d83;
+    margin-bottom:10px;
+}
+
+.success-message p{
+    color:#555;
+    line-height:1.7;
+}
+
+.success-message button{
+    margin-top:25px;
+    padding:12px 30px;
+    border:none;
+    background:#e42328;
+    color:#fff;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
 /* ===========================
    PRELOADER
 =========================== */
@@ -1104,7 +1159,7 @@ font-size:34px;
 	}
 	.secondary-btn{
 		padding: 15px 0; width: 48%; text-align: center; font-size: 14px;}
-	.primary-btn{width: 48%; padding: 15px 0; text-align: center; margin: 0;font-size: 14px; display:none;}
+	.primary-btn{width: 48%; padding: 15px 0; text-align: center; margin: 0;font-size: 14px; display: none;}
 	}
 
 
