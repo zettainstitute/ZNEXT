@@ -112,20 +112,20 @@
           <h3>Student Registration</h3>
           <form action="https://formsubmit.co/onlinezetta@gmail.com" id="registrationForm" method="POST">
             <div class="input-group">
-              <input type="text" name="student_name" required>
+              <input type="text" name="student_name" >
               <label>Student Name</label>
             </div>
             <div class="input-group">
-              <input type="text" name="parent_name" required>
+              <input type="text" name="parent_name" >
               <label>Parent Name</label>
             </div>
             <div class="double">
               <div class="input-group">
-                <input type="tel" name="mobile_student" required>
+                <input type="tel" name="mobile_student" >
                 <label>Student Mobile</label>
               </div>
               <div class="input-group">
-                <input type="tel" name="mobile_parent" required>
+                <input type="tel" name="mobile_parent" >
                 <label>Parent Mobile</label>
               </div>
             </div>
@@ -171,15 +171,7 @@
 			<input type="hidden" name="_template" value="table">
             <button class="register-btn"> Register Now </button>
           </form>
-          <div id="successMessage" class="success-message">
-    <div class="success-icon">✅</div>
-    <h3>Registration Successful!</h3>
-    <p>
-        Thank you for registering for <strong>ZNEXT 2027</strong>.<br>
-        Our team will contact you shortly.
-    </p>
-    <button id="closeMessage">OK</button>
-</div>
+   
         </div>
       </div>
     </section>
@@ -399,5 +391,31 @@
     <a href="#register" class="sticky-register"> Register Now </a>
     <button id="topBtn"> ↑ </button>
     <script src="js/script.js"></script>
+          <div id="successOverlay" class="success-overlay">
+
+    <div class="success-message">
+
+        <div class="success-icon">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <h3>Registration Successful!</h3>
+
+        <p>
+            Thank you for registering for
+            <strong>ZNEXT 2027</strong>.
+        </p>
+
+        <p>
+            Our team will contact you shortly.
+        </p>
+
+        <button type="button" id="closeMessage">
+            Continue
+        </button>
+
+    </div>
+
+</div>
   </body>
 </html>
