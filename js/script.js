@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded",()=>{
 
 // Registration
-const form=document.querySelector(".registration-form form");
+//const form=document.querySelector(".registration-form form");
 const msg=document.getElementById("msg");
 
 if(form){
 
 form.addEventListener("submit",e=>{
 
-e.preventDefault();
+//e.preventDefault();
 
 if(msg){
 
-msg.innerHTML="<div class='success'>🎉 Registration Successful!</div>";
+msg.innerHTML="<div class='success'>ðŸŽ‰ Registration Successful!</div>";
 
 }
 
@@ -172,5 +172,38 @@ window.addEventListener("load", function(){
         loader.classList.add("loader-hide");
 
     }, 800);
+
+});
+
+const form = document.getElementById("registrationForm");
+const successMessage = document.getElementById("successMessage");
+
+form.addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action,{
+        method:"POST",
+        body:formData
+    });
+
+    if(response.ok){
+
+        successMessage.classList.add("show");
+
+        form.reset();
+
+    }else{
+
+        alert("Something went wrong. Please try again.");
+
+    }
+	if (closeMessage) {
+    closeMessage.addEventListener("click", function () {
+        successMessage.classList.remove("show");
+    });
+}
 
 });
