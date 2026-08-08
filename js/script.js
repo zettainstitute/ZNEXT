@@ -254,7 +254,7 @@ window.addEventListener("load", () => {
 
 
 const stickyRegister = document.querySelector(".sticky-register");
-const registrationSection = document.querySelector(".registration");
+const registrationSection = document.querySelector(".registration-form");
 
 if (stickyRegister && registrationSection) {
 
