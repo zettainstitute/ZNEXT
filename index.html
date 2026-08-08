@@ -115,54 +115,52 @@
               <input type="text" name="student_name" required>
               <label>Student Name *</label>
             </div>
+<!--
             <div class="input-group">
               <input type="text" name="parent_name" required>
               <label>Parent Name *</label>
             </div>
+-->
             <div class="double">
               <div class="input-group">
                 <input type="tel" name="mobile_student" required>
                 <label>Student Mobile *</label>
               </div>
+               <div class="input-group">
+              <input type="email" name="email" required>
+              <label>Email Address *</label>
+            </div>
+<!--
               <div class="input-group">
                 <input type="tel" name="mobile_parent" required>
                 <label>Parent Mobile *</label>
               </div>
+-->
             </div>
-            <div class="input-group">
-              <input type="email" name="email" required>
-              <label>Email Address *</label>
-            </div>
+           
             <div class="double">
+<!--
               <select name="Board">
                 <option>Select Board </option>
                 <option>CBSE</option>
                 <option>ICSE</option>
                 <option>State Board</option>
               </select>
-              <select required name="class" required>
-                <option>Select Class *</option>
-                <option>Class 9</option>
+-->
+              <select  class="input-group" required name="class" required>
+                <option>Select Class</option>
                 <option>Class 10</option>
-                <option>Class 11</option>
-                <option>Class 12</option>
               </select>
-            </div>
-            <div class="input-group">
+               <div class="input-group">
               <input type="text" name="school_name" required>
               <label>School Name *</label>
+				</div>
             </div>
-            <div class="double">
-              <select name="state" required>
-                <option>Select State *</option>
-                <option>Chandigarh</option>
-                <option>Punjab</option>
-                <option>Haryana</option>
-                <option>Himachal Pradesh</option>
-                <option>Delhi</option>
-                <option>Other</option>
-              </select>
-              <input placeholder="City" name="city">
+           
+           
+            <div class="input-group">
+             <input placeholder="City" name="city" required>
+              <label>City *</label>
             </div>
             
             <input type="hidden" name="_subject" value="New ZNEXT Registration">
