@@ -1440,7 +1440,7 @@ z-index: 999;
     bottom: calc(20px + env(safe-area-inset-bottom));
     transform: translateX(-50%);
 
-    background: #ffffff;
+    background: #e42328;
     color: #fff;
 
     padding: 16px 35px;
