@@ -254,27 +254,35 @@ window.addEventListener("load", () => {
 
 
 const stickyRegister = document.querySelector(".sticky-register");
-const registrationForm = document.querySelector(".registration-form");
+const registrationSection = document.querySelector(".registration");
 
-if (stickyRegister && registrationForm) {
+if (stickyRegister && registrationSection) {
 
-    const formObserver = new IntersectionObserver((entries) => {
+    function checkRegistrationVisibility() {
 
-        entries.forEach(entry => {
+        const rect = registrationSection.getBoundingClientRect();
+        const screenHeight = window.innerHeight;
 
-            if (entry.isIntersecting) {
-                stickyRegister.style.opacity = "0";
-                stickyRegister.style.pointerEvents = "none";
-            } else {
-                stickyRegister.style.opacity = "1";
-                stickyRegister.style.pointerEvents = "auto";
-            }
+        // Form is visible on screen
+        if (
+            rect.top < screenHeight &&
+            rect.bottom > 0
+        ) {
 
-        });
+            stickyRegister.classList.add("hide-sticky");
 
-    }, {
-        threshold: 0.2
-    });
+        } else {
 
-    formObserver.observe(registrationForm);
+            stickyRegister.classList.remove("hide-sticky");
+
+        }
+
+    }
+
+    window.addEventListener("scroll", checkRegistrationVisibility);
+    window.addEventListener("resize", checkRegistrationVisibility);
+
+    // Check immediately when page loads
+    checkRegistrationVisibility();
+
 }
