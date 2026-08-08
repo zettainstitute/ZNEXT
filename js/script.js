@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================
 
     const form = document.getElementById("registrationForm");
-    const successMessage = document.getElementById("successMessage");
+    const successMessage = document.getElementById("successOverlay");
     const closeMessage = document.getElementById("closeMessage");
 
     const menuBtn = document.getElementById("menuBtn");
@@ -36,13 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (response.status === 200 || response.ok) {
 
-            successMessage.classList.add("show");
+            successOverlay.classList.add("show");
             form.reset();
 
         } else {
 
             console.log(response.status);
-            successMessage.classList.add("show");
+            successOverlay.classList.add("show");
 
         }
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // If FormSubmit already received the data,
         // still show the success popup.
-        successMessage.classList.add("show");
+        successOverlay.classList.add("show");
 
     }
 
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         closeMessage.addEventListener("click", function () {
 
-            successMessage.classList.remove("show");
+            successOverlay.classList.remove("show");
 
         });
 
