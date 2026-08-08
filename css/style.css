@@ -6,7 +6,7 @@ box-sizing: border-box;
 }
 :root {
 --primary: #0c2d83;
---secondary: #ffffff;
+--secondary: #e42328;
 --yellow: #ffd200;
 --light: #f7f9fd;
 --text: #555;
@@ -1435,29 +1435,23 @@ z-index: 999;
 /* Sticky Register */
 
 .sticky-register {
-position: fixed;
+    position: fixed;
+    left: 50%;
+    bottom: calc(20px + env(safe-area-inset-bottom));
+    transform: translateX(-50%);
 
-bottom: 20px;
+    background: #e42328;
+    color: #fff;
 
-left: 50%;
+    padding: 16px 35px;
+    border-radius: 50px;
 
-transform: translateX(-50%);
+    font-weight: bold;
+    text-decoration: none;
 
-background: #e42328;
+    z-index: 998;
 
-padding: 16px 35px;
-
-color: white;
-
-border-radius: 50px;
-
-text-decoration: none;
-
-font-weight: bold;
-
-z-index: 999;
-
-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
 }
 
 /* Scroll Top */
