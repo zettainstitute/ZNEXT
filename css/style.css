@@ -13,12 +13,13 @@ box-sizing: border-box;
 }
 html {
 scroll-behavior: smooth;
+	background-color: #ffffff;
 }
 body {
 margin: 0;
 padding: 0;
 font-family: "Poppins", sans-serif;
-background: #f6f8fc;
+background:#ffffff;
 color: #123;
 overflow-x: hidden;
 }
