@@ -253,36 +253,3 @@ window.addEventListener("load", () => {
 });
 
 
-const stickyRegister = document.querySelector(".sticky-register");
-const registrationSection = document.querySelector(".registration-form");
-
-if (stickyRegister && registrationSection) {
-
-    function checkRegistrationVisibility() {
-
-        const rect = registrationSection.getBoundingClientRect();
-        const screenHeight = window.innerHeight;
-
-        // Form is visible on screen
-        if (
-            rect.top < screenHeight &&
-            rect.bottom > 0
-        ) {
-
-            stickyRegister.classList.add("hide-sticky");
-
-        } else {
-
-            stickyRegister.classList.remove("hide-sticky");
-
-        }
-
-    }
-
-    window.addEventListener("scroll", checkRegistrationVisibility);
-    window.addEventListener("resize", checkRegistrationVisibility);
-
-    // Check immediately when page loads
-    checkRegistrationVisibility();
-
-}
