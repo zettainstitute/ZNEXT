@@ -23,7 +23,16 @@ background:#ffffff;
 color: #123;
 overflow-x: hidden;
 }
+.sticky-register {
+    transition: opacity .3s ease, visibility .3s ease, transform .3s ease;
+}
 
+.sticky-register.hide-sticky {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(20px);
+}
 
 .success-overlay {
 position: fixed;
