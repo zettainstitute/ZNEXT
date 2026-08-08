@@ -251,3 +251,30 @@ window.addEventListener("load", () => {
     }
 
 });
+
+
+const stickyRegister = document.querySelector(".sticky-register");
+const registrationForm = document.querySelector(".registration-form");
+
+if (stickyRegister && registrationForm) {
+
+    const formObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                stickyRegister.style.opacity = "0";
+                stickyRegister.style.pointerEvents = "none";
+            } else {
+                stickyRegister.style.opacity = "1";
+                stickyRegister.style.pointerEvents = "auto";
+            }
+
+        });
+
+    }, {
+        threshold: 0.2
+    });
+
+    formObserver.observe(registrationForm);
+}
