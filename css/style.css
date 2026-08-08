@@ -1529,3 +1529,12 @@ width: 90%;
 text-align: center;
 }
 }
+
+/* iPhone / iPad Safari fix */
+@supports (-webkit-touch-callout: none) {
+
+    .sticky-register {
+        display: none !important;
+    }
+
+}
